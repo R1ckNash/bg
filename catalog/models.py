@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Style(models.Model):
     style = models.CharField(max_length=200,
-                             help_text="Enter a style of beer (Pale Lager and Pilsner, Dark Lager, German Bock, Brown Ale, Pale Ale, India Pale Ale, Porter,	Stout, Belgian-Style Ale, Wheat Beer, Wild & Sour Ale, Specialty Beer)")
+                             help_text="Enter a style of beer (Pale Lager and Pilsner, Dark Lager, German Bock, Brown Ale, Pale Ale, India Pale Ale, Porter, Stout, Belgian-Style Ale, Wheat Beer, Wild & Sour Ale, Specialty Beer)")
 
     def __str__(self):
         return self.style
