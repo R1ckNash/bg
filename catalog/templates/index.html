@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Beer Geek Home</h1>
+
+  <p>Welcome to <em>Beer Geek</em>, a super puper place about PIVO.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The Beer Geek has the following record counts:</p>
+  <ul>
+    <li><strong>Beers:</strong> {{ num_beers }}</li>
+    <li><strong>Producers:</strong> {{ num_producers }}</li>
+  </ul>
+
+{% endblock %}
