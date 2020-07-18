@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Name: {{ beer.name }}</h1>
+
+  <p><strong>Producer:</strong> <a href="">{{ beer.producer }}</a></p>
+  <p><strong>Category:</strong> {% for category in beer.category.all %} {{ category }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>Style:</strong> {% for style in beer.style.all %} {{ style }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>Volume:</strong> {{ beer.volume }}</p>
+  <p><strong>Fact:</strong> {{ beer.fact }}</p>
+
+  <div style="margin-left:20px;margin-top:20px">
+    Place for comments
+  </div>
+{% endblock %}

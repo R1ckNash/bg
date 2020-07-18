@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Beer List</h1>
+
+    {% if beer_list %}
+    <ul>
+
+      {% for beer in beer_list %}
+      <li>
+        <a href="{{ beer.get_absolute_url }}">{{ beer.name }}</a> ({{beer.producer}}, Category - {% for category in beer.category.all %} {{ category }}{% if not forloop.last %}, {% endif %}{% endfor %})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no beers in the BeerGeek.</p>
+    {% endif %}       
+{% endblock %}

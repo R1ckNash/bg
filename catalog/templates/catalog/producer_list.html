@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Producer List</h1>
+
+    {% if producer_list %}
+    <ul>
+
+      {% for producer in producer_list %}
+      <li>
+        <a href="{{ producer.get_absolute_url }}">{{ producer.country }}</a> ({{producer.city}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no producers.</p>
+    {% endif %}       
+{% endblock %}
