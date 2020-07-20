@@ -31,7 +31,7 @@ class Beer(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('beer-detail', args=[str(self.id)])
+        return reverse('catalog:beer-detail', args=[str(self.id)])
 
 
 class Producer(models.Model):
@@ -40,7 +40,7 @@ class Producer(models.Model):
     brewer = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return reverse('producer-detail', args=[str(self.id)])
+        return reverse('catalog:producer-detail', args=[str(self.id)])
 
     def __str__(self):
         return '%s, %s' % (self.country, self.city)
